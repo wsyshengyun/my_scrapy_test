@@ -2,7 +2,9 @@
 #
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/items.html
-
+""" 
+项目的Item文件,编写爬取的字段名称等.
+"""
 import scrapy
 
 
