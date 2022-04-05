@@ -21,7 +21,6 @@ class MatplotSpider(scrapy.Spider):
         url = response.urljoin(href)
         example = FilescrapyItem() 
         example['file_urls'] = [url]
-        yield example
-        pass
+        return example
         
         

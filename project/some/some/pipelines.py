@@ -30,7 +30,7 @@ class SomePipeline:
        
         self.client = pymongo.MongoClient(self.mongo_host, self.mongo_port) 
         self.db = self.client[self.mongo_db]
-        self.book_collection = self.db['books']
+        self.book_collection = self.db['test_books']
         pass
     
     

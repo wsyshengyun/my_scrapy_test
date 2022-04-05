@@ -64,9 +64,9 @@ ROBOTSTXT_OBEY = True
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
 #    'filescrapy.pipelines.FilescrapyPipeline': 300,
+   'scrapy.pipelines.files.FilesPipeline':1,
 #    'filescrapy.pipelines.files.FilesPipeline':1,
-#    'filescrapy.pipelines.files.FilesPipeline':1,
-    'filescrapy.pipelines.MyFilesPipeline':1
+    # 'filescrapy.pipelines.MyFilesPipeline':1
 }
 FILES_STORE = 'examples_src'
 

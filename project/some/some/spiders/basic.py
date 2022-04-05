@@ -7,6 +7,13 @@ class BasicSpider(scrapy.Spider):
     name = 'basic'
     # allowed_domains = ['toscrape.com']
     start_urls = ['http://books.toscrape.com/index.html']
+    max_count = 2
+    
+    def __init__(self ):
+        self.num = 0
+        pass
+        
+        
 
     def parse(self, response):
 
@@ -17,8 +24,9 @@ class BasicSpider(scrapy.Spider):
         # 提取下一页
         le = LinkExtractor(restrict_css='ul.pager li.next') 
         links = le.extract_links(response=response)
-        if links:
+        if links and self.num<self.max_count:
             next_url = links[0].url 
+            self.num+= 1
             yield scrapy.Request(next_url, callback=self.parse)
         
 

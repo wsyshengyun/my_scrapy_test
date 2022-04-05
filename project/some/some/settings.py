@@ -16,6 +16,10 @@ MONGO_DB = 'Book'
 MONGO_HOST = '127.0.0.1'
 MONGO_PORT = 27017
 
+FEED_FORMAT = 'csv'
+FEED_EXPORT_ENCODING = 'gbk'
+FEED_EXPORT_FIELDS=['book_name', 'price', 'stock_num', 'reviews_num']
+FEED_URI = 'export_data/%(name)s.csv'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'some (+http://www.yourdomain.com)'
 
