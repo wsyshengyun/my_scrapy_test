@@ -8,7 +8,7 @@ class MatplotSpider(scrapy.Spider):
     start_urls = ['http://matplotlib.org/examples/index.html']
 
     def parse(self, response):
-        
+        print('='*50)
         le = LinkExtractor(restrict_css='div.toctree-wrapper.compound', deny='/index.html$')
         for link in le.extract_links(response):
             yield scrapy.Request(url = link.url, callback=self.parse_example)
@@ -21,6 +21,11 @@ class MatplotSpider(scrapy.Spider):
         url = response.urljoin(href)
         example = FilescrapyItem() 
         example['file_urls'] = [url]
-        return example
+        print('-'*50)
+        print(example)
+        yield example
+        
+    
+
         
         

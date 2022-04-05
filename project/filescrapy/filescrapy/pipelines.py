@@ -16,10 +16,10 @@ from os.path import basename, dirname, join
         # return item
 
 
-class MyFilesPipeline(FilesPipeline):
+# class MyFilesPipeline(FilesPipeline):
     
-    def file_path(self, request, response=None, info=None, *, item=None):
-        # return super().file_path(request, response, info, item=item)
-        path = urlparse(request.url).path 
-        return join(basename(dirname(path)), basename(path))
+#     def file_path(self, request, response=None, info=None, *, item=None):
+#         # return super().file_path(request, response, info, item=item)
+#         path = urlparse(request.url).path 
+#         return join(basename(dirname(path)), basename(path))
         
