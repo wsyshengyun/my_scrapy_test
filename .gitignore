@@ -1,4 +1,6 @@
+*.xml
 *.code-workspace
+.idea/
 # Built application files
 *.apk
 *.ap_
@@ -49,3 +51,13 @@ tmp/
 
 # ignore supervisor configure file
 supervisor.conf
+project/downloadimage/downloadimage/__init__.py
+project/downloadimage/downloadimage/items.py
+project/downloadimage/downloadimage/middlewares.py
+project/downloadimage/downloadimage/pipelines.py
+project/downloadimage/downloadimage/settings.py
+project/downloadimage/downloadimage/spiders/__init__.py
+project/downloadimage/downloadimage/spiders/getimage.py
+project/downloadimage/scrapy.cfg
+project/filescrapy/examples_files/
+project/tutorial/tutorial/log/

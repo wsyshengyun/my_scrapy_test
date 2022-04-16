@@ -1,6 +1,7 @@
 import scrapy
 from scrapy.linkextractors import LinkExtractor
-from filescrapy.items import FilescrapyItem
+# from filescrapy.items import FilescrapyItem
+from ..items import FilescrapyItem
 
 class MatplotSpider(scrapy.Spider):
     name = 'matplot'
@@ -14,18 +15,11 @@ class MatplotSpider(scrapy.Spider):
             yield scrapy.Request(url = link.url, callback=self.parse_example)
         pass
 
-    
     def parse_example(self, response):
-        
-        href = response.css('a.reference.external::attr(href)').extract_first() 
+        href = response.css('a.reference.external::attr(href)').extract_first()
         url = response.urljoin(href)
         example = FilescrapyItem() 
         example['file_urls'] = [url]
-        print('-'*50)
+        print('-' * 50)
         print(example)
         yield example
-        
-    
-
-        
-        
