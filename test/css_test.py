@@ -113,8 +113,10 @@ def test_xpath():
     res16 = res14.xpath("..")  # bookstore标签
 
     # 所有的文本节点
+    # todo 如何删除结果中的换行符?
     res17 = sel.xpath("//book[2]//text()")  # 包含了换行的空元素字符串
     res18 = sel.xpath("//book[2]//text()").extract()  # 包含了换行的空元素字符串
+    res19 = sel.xpath('normalize-space(//book[2]//text())').extract()
 
     pass
 
