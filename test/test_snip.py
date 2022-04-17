@@ -1,57 +1,38 @@
 # -*- coding: utf-8 -*-
-'''
-@File    :   snip_test.py
-@Time    :   2022/04/01 07:21:42
-
-'''
 
 
 from test.log import logger
-import unittest 
+import unittest
 
 logger.info("in snip_test")
 
-class Mytest(unittest.TestCase):
-    
-    def setUp(self):
-        
-        pass
-    
-    
-    def tearDown(self):
 
+class Mytest(unittest.TestCase):
+
+    def setUp(self):
         pass
-    
-    
+
+    def tearDown(self):
+        pass
+
     def test_type_name(self):
-        obj = A() 
+        obj = A()
         name = type(obj).__name__
         self.assertEqual(name, 'A')
-        
+
         pass
-        
 
     def test_dict_pop(self):
-        
-        dit = {'a':1, 'b':2, 'c':3}
+        dit = {'a': 1, 'b': 2, 'c': 3}
         value = dit.pop('b')
         self.assertEqual(value, 2)
 
         pass
-        
-        
-        
+
 
 class A(object):
-    
-
-
-        
-
-        
-        pass
+    pass
 
 
 def main():
-    
     pass
