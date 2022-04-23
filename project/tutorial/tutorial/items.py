@@ -5,8 +5,8 @@
 """ 
 项目的Item文件,编写爬取的字段名称等.
 """
-from scrapy import Field
 import scrapy
+from scrapy import Field
 
 
 class TutorialItem(scrapy.Item):
@@ -16,12 +16,10 @@ class TutorialItem(scrapy.Item):
 
 
 class NewItem(scrapy.Item):
-    title = scrapy.Field() 
-    url = scrapy.Field() 
+    title = scrapy.Field()
+    url = scrapy.Field()
 
-    
+
 class Example(scrapy.Item):
-    x = Field(a='hello', b=[1,2,3])
-    y = Field(a = lambda x:x**2) 
-    
-
+    x = Field(a='hello', b=[1, 2, 3])
+    y = Field(a=lambda x: x ** 2)

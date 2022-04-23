@@ -5,20 +5,19 @@
 
 '''
 from test.log import logger
-logger.info("-"*100)
+
+logger.info("-" * 100)
 
 import unittest
 
 # from test.snip_test import main
 
 
-
-
 # main()
 
 
 # def run_test():
-s = unittest.TestSuite() 
+s = unittest.TestSuite()
 loader = unittest.TestLoader()
 
 path = 'test/'
@@ -26,7 +25,5 @@ s.addTests(loader.discover(path))
 
 run = unittest.TextTestRunner()
 run.run(s)
-
-
 
 # run_test()

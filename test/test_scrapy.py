@@ -1,7 +1,7 @@
-from scrapy.selector import Selector
-from scrapy.http import HtmlResponse
 import unittest
-from test.log import logger
+
+from scrapy.http import HtmlResponse
+from scrapy.selector import Selector
 
 body = '''
  <html>

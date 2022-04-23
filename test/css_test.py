@@ -1,5 +1,4 @@
 # coding:utf8
-import scrapy
 from scrapy import Selector
 
 # <?xml version="1.0" encoding="ISO-8859-1"?>

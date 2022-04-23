@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
 
-from test.log import logger
 import unittest
+
+from test.log import logger
 
 logger.info("in snip_test")
 
